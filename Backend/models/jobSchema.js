@@ -31,11 +31,12 @@ const jobSchema = new mongoose.Schema({
   },
   fixedSalary: {
     type: Number,
-    required: [true, "Please Provide Fixed Salary"],
   },
   salaryFrom: {
     type: Number,
-    required: [true, "Please Provide Variable Salary"],
+  },
+  salaryTo: {
+    type: Number,
   },
 
   skills: {
@@ -46,6 +47,10 @@ const jobSchema = new mongoose.Schema({
   jobPostedOn: {
     type: Date,
     default: Date.now,
+  },
+  expired: {
+    type: String,
+    required: [true, "Please Provide Job Exprired"],
   },
 
   postedBy: {
