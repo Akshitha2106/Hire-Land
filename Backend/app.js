@@ -9,9 +9,8 @@ import jobRouter from "./routes/jobRouter.js";
 import { dbConnection } from "./database/dbConnection.js";
 import { errorMiddleWare } from "./middlewares/error.js";
 
+dotenv.config({ path: "./config.env" });
 const app = express();
-
-dotenv.config({ path: "./config/config.env" });
 
 app.use(
   cors({
