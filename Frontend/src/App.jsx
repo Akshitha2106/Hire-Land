@@ -6,16 +6,35 @@ import Register from "./components/Auth/Register";
 import Navbar from "./components/Layout/NavBar";
 import Footer from "./components/Layout/Footer";
 import Home from "./components/Home/Home";
-import Jobs from "./components/Jobs/Jobs";
-import JobDetails from "./components/Jobs/JobDetails";
-import MyJobs from "./components/Jobs/MyJobs";
-import PostJobs from "./components/Jobs/PostJobs";
-import Application from "./components/Jobs/Application";
-import MyApplications from "./components/Jobs/MyApplications";
-import NotFound from "./components/Layout/NotFound";
+import Jobs from "./components/Job/Jobs";
+import JobDetails from "./components/Job/JobDetails";
+import MyJobs from "./components/Job/MyJobs";
+import PostJobs from "./components/Job/PostJob";
+import Application from "./components/Application/Application";
+import MyApplications from "./components/Application/MyApplications";
+import NotFound from "./components/NotFound/NotFound";
 import axios from "axios";
 import { Toaster } from "react-hot-toast";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { login, settingAuth } from "./components/slices/userSlice";
 function App() {
+  // const dispatch = useDispatch();
+  // const User = useSelector((state) => state.user.isAuthorized);
+  // useEffect(() => {
+  //   const fetchUser = async () => {
+  //     try {
+  //       const response = await axios.get(
+  //         "http://localhost:4000/api/user/getUser",
+  //         { withCredentials: true }
+  //       );
+  //       dispatch(login(response.data.user));
+  //     } catch (error) {
+  //       dispatch(settingAuth(false));
+  //     }
+  //   };
+  //   fetchUser();
+  // }, [User, dispatch]);
   return (
     <>
       <Router>
